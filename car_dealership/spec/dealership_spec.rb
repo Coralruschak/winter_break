@@ -34,15 +34,15 @@ RSpec.describe Dealership do
     end
 
     it 'add_car adds to inventory' do
-      dealership.add_car(@car_1)
-      dealership.add_car(@car_2)
+      @dealership.add_car(@car_1)
+      @dealership.add_car(@car_2)
 
       expect(@dealership.inventory).to eq([@car_1, @car_2])
     end
 
     it 'inventory_count works with cars added to array' do
-      dealership.add_car(@car_1)
-      dealership.add_car(@car_2)
+      @dealership.add_car(@car_1)
+      @dealership.add_car(@car_2)
 
       expect(@dealership.inventory_count).to eq(2)
     end
