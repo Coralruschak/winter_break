@@ -35,7 +35,9 @@ RSpec.describe Dealership do
       expect(@dealership.inventory_count).to eq(0)
     end
 
-    it 'has_inventory to default false'
+    it 'has_inventory? to default false' do
+      expect(@dealership.has_inventory?).to eq(false)
+    end
 
     it 'add_car adds to inventory' do
       @dealership.add_car(@car_1)
