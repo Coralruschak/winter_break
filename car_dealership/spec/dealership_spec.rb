@@ -53,6 +53,7 @@ RSpec.describe Dealership do
       expect(@dealership.inventory_count).to eq(2)
     end
   end
+  
 
   it 'sorts cars_by_make' do
     @dealership.add_car(@car_1)
@@ -80,5 +81,38 @@ RSpec.describe Dealership do
     @dealership.add_car(@car_4)
     
     expect(@dealership.details).to eq({"total_value" => 156000, "address" => "123 Main Street"})
+  end
+
+  describe '#average_price_of_car' do
+    it 'calculates average_price_of_car across inventory' do
+      @dealership.add_car(@car_1)
+      @dealership.add_car(@car_2)
+      @dealership.add_car(@car_3)
+      @dealership.add_car(@car_4)
+
+      expect(@dealership.average_price_of_car).to eq("39,000")
+    end
+  end
+
+  describe '#cars_sorted_by_price ' do
+    it 'sorts cars from cheapest to most expensive within inventory array' do
+      @dealership.add_car(@car_1)
+      @dealership.add_car(@car_2)
+      @dealership.add_car(@car_3)
+      @dealership.add_car(@car_4)
+
+      expect(@dealership.cars_sorted_by_price).to eq([@car_3, @car_2, @car_4, @car_1])
+    end
+  end
+  
+  describe '#inventory_hash' do
+    it 'creates a hash of cars_by_make from inventory' do
+      @dealership.add_car(@car_1)
+      @dealership.add_car(@car_2)
+      @dealership.add_car(@car_3)
+      @dealership.add_car(@car_4)
+
+      expect(@dealership.inventory_hash).to eq({"Ford" => [@car_1], "Toyota" => [@car_2, @car_3], "Chevrolet" => [@car_4]})
+    end
   end
 end
