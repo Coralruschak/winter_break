@@ -34,6 +34,6 @@ class Dealership
   end
 
   def details
-    
+    {"total_value" => total_value, "address" => @address}
   end
 end
