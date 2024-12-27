@@ -1,7 +1,7 @@
 require 'rspec'
 require './lib/car'
 require './lib/dealership'
-require 'pry'
+require 'pry' 
 
 RSpec.describe Dealership do
   before(:each) do
