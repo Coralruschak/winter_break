@@ -42,5 +42,14 @@ class Dealership
     average.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(',').reverse.insert(0, "$")
   end
 
+  def cars_sorted_by_price
+    @inventory.sort_by do |car|
+      car.total_cost
+    end
+  end
+
+  def inventory_hash
+    
+  end
 
 end
