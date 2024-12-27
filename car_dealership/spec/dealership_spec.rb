@@ -90,7 +90,7 @@ RSpec.describe Dealership do
       @dealership.add_car(@car_3)
       @dealership.add_car(@car_4)
 
-      expect(@dealership.average_price_of_car).to eq("39,000")
+      expect(@dealership.average_price_of_car).to eq("$39,000")
     end
   end
 
