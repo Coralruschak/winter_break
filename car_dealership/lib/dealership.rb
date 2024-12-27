@@ -36,4 +36,11 @@ class Dealership
   def details
     {"total_value" => total_value, "address" => @address}
   end
+
+  def average_price_of_car
+    average = total_value / inventory_count
+    average.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(',').reverse.insert(0, "$")
+  end
+
+
 end
