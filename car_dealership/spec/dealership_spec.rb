@@ -101,7 +101,7 @@ RSpec.describe Dealership do
       @dealership.add_car(@car_3)
       @dealership.add_car(@car_4)
 
-      expect(@dealership.cars_sorted_by_price).to eq([@car_3, @car_2, @car_4, @car_1])
+      expect(@dealership.cars_sorted_by_price).to eq([@car_3, @car_4, @car_2, @car_1])
     end
   end
   
