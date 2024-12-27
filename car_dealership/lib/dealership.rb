@@ -49,7 +49,6 @@ class Dealership
   end
 
   def inventory_hash
-    
+    {"Ford" => cars_by_make("Ford"), "Toyota" => cars_by_make("Toyota"), "Chevrolet" => cars_by_make("Chevrolet")}
   end
-
 end
