@@ -8,7 +8,7 @@ RSpec.describe Author do
     
     describe '#initilize' do
         it 'exists' do
-            expect(@charlotte_bronte).to_be Author
+            expect(@charlotte_bronte).to be_a Author
         end
         
         it 'has first_name' do

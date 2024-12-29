@@ -7,13 +7,13 @@ RSpec.describe Book do
 
   describe '#initialize' do
     it 'exists' do
-      expect(@book).to_be_a Book
+      expect(@book).to be_a Book
     end
 
     it 'has attributes' do
       expect(@book.author_first_name).to eq("Harper")
       expect(@book.author_last_name).to eq("Lee")
-      expect(@book.title).to eq("To Kill A Mockingbird")
+      expect(@book.title).to eq("To Kill a Mockingbird")
       expect(@book.publication_date).to eq("July 11, 1960")
     end
   end
@@ -26,7 +26,7 @@ RSpec.describe Book do
 
   describe '#publication_year' do
     it 'pulls last four characters from publication_date' do
-      expect(@book.publication_year).to eq("1960git ")
+      expect(@book.publication_year).to eq("1960")
     end
   end
 end
